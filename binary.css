@@ -5,70 +5,19 @@
 @import "night/codeblock.dark.css";
 @import "night/sourcemode.dark.css";
 
-/* vietnamese */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(ash/Montserrat-v.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(ash/Montserrat-ext.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(ash/Montserrat.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
-/* latin */
-@font-face {
-  font-family: 'Questrial';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Questrial'), local('Questrial-Regular'), url(ash/Questrial.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
-}
+/* Binary Dark Theme */
+@import "binary/fonts.css";
+@import "binary/variables.css";
+@import "binary/global.css";
+@import "binary/typography.css";
+@import "binary/code.css";
 
-:root {
-    --text-color: #fff;
-    --bg-color: #2D323C;
-    --code-block-bg-color: #4d4d4d;
-    --side-bar-bg-color: #4d4d4d;
-    --window-border: none;
-
-    --active-file-bg-color: #2D323C;
-    --active-file-text-color: #fff;
-    --item-hover-text-color: #fff;
-    --control-text-color: #d5d5d5;
-}
-
-html {
-	font-family: 'Questrial', sans-serif;
-	font-size: 18px;
-	-webkit-font-smoothing: antialiased;
-}
-
-html, body {
-    background-color: #2D323C;
-    color: #fff;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-* {
-    transition: all 350ms;
-    -o-transition: all 350ms;
-    -moz-transition: all 350ms;
-    -webkit-transition: all 350ms;
+.md-fences .CodeMirror.CodeMirror-wrap {
+    top: -0.8em;
+    margin-bottom: 0;
+    border: 2px solid #576574;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .md-toc-inner:before {
@@ -98,52 +47,6 @@ pre.md-meta-block {
     max-width: 800px;
 }
 
-h1 {
-    font-size: 2.4rem;
-    color: #F75B76;
-}
-
-h2 {
-    font-weight: 600;
-    color: #3498db;
-}
-
-h3 {
-    font-size:1.4rem;
-    color: #B8E492;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: normal;
-}
-
-h3 {
-	text-transform: uppercase;
-}
-
-h5, h6 {
-	font-weight: bold;
-}
-
-a {
-	color: #fff;
-}
-
-[md-inline] a {
-	background-color: #F5A623;
-	color: #fff;
-    text-decoration: none;
-    padding: 4px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-}
-
-code {
-    color: #B8E492;
-    font-size: 0.9rem;
-}
-
 td {
 	border: 1px solid #2D323C;
 	background-color: #858585;
@@ -156,14 +59,6 @@ th {
 	text-align: center;
 }
 
-.md-fences .CodeMirror.CodeMirror-wrap {
-    top: -0.8em;
-    margin-bottom: 0;
-    border: 2px solid #576574;
-    border-radius: 5px;
-    padding: 10px;
- }
-
 .file-list-item-summary {
 	height: 36px;
     margin-top: 8px;
@@ -175,7 +70,14 @@ th {
 }
 
 #write {
-	cursor: -webkit-image-set(url("ash/cursor.png") 1x, url("ash/cursor@2x.png") 2x) 0 0, auto;
+	cursor: -webkit-image-set(url("binary/cursor.png") 1x, url("binary/cursor@2x.png") 2x) 0 0, auto;
+}
+
+mark {
+    background-color: #F75B76;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
 }
 
 blockquote {
@@ -186,6 +88,8 @@ blockquote {
     margin: 1.5em 10px;
     position: relative;
     padding-left: 24px;
+    background-color: #161A20;
+    border-radius: 5px;
 }
 
 blockquote:before {
@@ -197,12 +101,12 @@ blockquote:before {
     float: left;
     position: absolute;
     border-radius: 25px;
-    left: -8px;
+    left: -12px;
     vertical-align: -0.4em;
     display: block;
     height: 25px;
     width: 25px;
-    background-color: #F75B76;
+    background-color: var(--primary-color);
     font-style: normal;
 }
 
@@ -273,7 +177,7 @@ blockquote:before {
 
 .task-list-done {
     text-decoration: line-through;
-    color: #d4d4d4;
+    color: #d4d4d4 ;
 }
 
 .footnote-line {
@@ -319,11 +223,4 @@ blockquote:before {
 
 #recent-file-panel {
     color: var(--blur-text-color);
-}
-
-mark {
-    background-color: #F75B76;
-    padding: 5px;
-    border-radius: 5px;
-    color: #fff;
 }

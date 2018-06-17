@@ -1,0 +1,32 @@
+h1 {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+h3 {
+    font-size:1.4rem;
+    color: var(--success-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+a {
+    color: #fff;
+}
+
+[md-inline] a {
+    background-color: var(--warning-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}

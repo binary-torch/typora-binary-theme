@@ -1,0 +1,19 @@
+* {
+    transition: all 350ms;
+    -o-transition: all 350ms;
+    -moz-transition: all 350ms;
+    -webkit-transition: all 350ms;
+}
+
+html {
+	font-family: 'Questrial', sans-serif;
+	font-size: 18px;
+	-webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    background-color: #2D323C;
+    color: #fff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}

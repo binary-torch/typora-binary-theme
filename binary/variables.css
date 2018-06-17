@@ -1,0 +1,16 @@
+:root {
+    --text-color: #fff;
+    --bg-color: #2D323C;
+    --code-block-bg-color: #4d4d4d;
+    --side-bar-bg-color: #4d4d4d;
+    --window-border: none;
+
+    --active-file-bg-color: #2D323C;
+    --active-file-text-color: #fff;
+    --item-hover-text-color: #fff;
+    --control-text-color: #d5d5d5;
+    --primary-color: #F75B76;
+    --secondary-color: #3498db;
+    --success-color: #B8E492;
+    --warning-color: #F5A623;
+}
